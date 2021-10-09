@@ -79,7 +79,7 @@ class UserInfoVC: UIViewController {
                 configureUIData()
             } catch {
                 if let dbError = error as? DBError {
-                    presentDBAlertVCOnMainThread(title: "Ooops, something went wrong", message: dbError.rawValue, buttonTitle: "Ok")
+                    presentDBAlertVCOnMainThread(title: "Something went wrong", message: dbError.rawValue, buttonTitle: "Ok")
                 } else {
                     presentDefaultAlert()
                 }
@@ -103,7 +103,7 @@ class UserInfoVC: UIViewController {
                 dismissLoadingView()
             } catch {
                 if let dbError = error as? DBError {
-                    presentDBAlertVCOnMainThread(title: "Ooops, something went wrong", message: dbError.rawValue, buttonTitle: "Ok")
+                    presentDBAlertVCOnMainThread(title: "Something went wrong", message: dbError.rawValue, buttonTitle: "Ok")
                 } else {
                     presentDefaultAlert()
                 }
@@ -122,7 +122,7 @@ class UserInfoVC: UIViewController {
                 self.presentDBAlertVCOnMainThread(title: "Success!", message: "\(user.fullName ?? "This user") has been succesfully added! 🥳", buttonTitle: "Ok")
                 return
             }
-            self.presentDBAlertVCOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+            self.presentDBAlertVCOnMainThread(title: "Unable to favorite", message: error.rawValue, buttonTitle: "Ok")
         }
     }
     

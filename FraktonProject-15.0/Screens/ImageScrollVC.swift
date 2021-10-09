@@ -42,7 +42,7 @@ class ImageScrollVC: UIViewController {
                 imageView.downloadImage(fromURL: userData.avatar)
             } catch {
                 if let dbError = error as? DBError {
-                    presentDBAlertVCOnMainThread(title: "Ooops, something went wrong", message: dbError.rawValue, buttonTitle: "Ok")
+                    presentDBAlertVCOnMainThread(title: "Something went wrong", message: dbError.rawValue, buttonTitle: "Ok")
                 } else {
                     presentDefaultAlert()
                 }
