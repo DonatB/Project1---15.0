@@ -66,7 +66,7 @@ class UserInfoVC: UIViewController {
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
-        let addButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .done, target: self, action: #selector(addButtonTapped))
+        let addButton = UIBarButtonItem(image: Images.heartSymbol, style: .plain, target: self, action: #selector(addButtonTapped))
         navigationItem.leftBarButtonItem = addButton
     }
     
@@ -132,8 +132,8 @@ class UserInfoVC: UIViewController {
         prevButton.addTarget(self, action: #selector(prevButtonTapped), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         
-        nextButton.set(backgroundColor: nextButtonColor, foregroundColor: .systemYellow, title: "Next", systemImageName: "person")
-        prevButton.set(backgroundColor: prevButtonColor, foregroundColor: .systemYellow, title: "Prev", systemImageName: "person")
+        nextButton.set(backgroundColor: nextButtonColor, foregroundColor: .systemYellow, title: "Next", systemImageName: "arrow.forward")
+        prevButton.set(backgroundColor: prevButtonColor, foregroundColor: .systemYellow, title: "Prev", systemImageName: "arrow.backward")
         
         nextButton.configuration?.imagePlacement = .trailing
         
@@ -214,7 +214,7 @@ class UserInfoVC: UIViewController {
             self.avatarImageView.downloadImage(fromURL: self.userInfo.avatar)
             self.emailLabel.text = self.userInfo.email
             self.idLabel.text = "\(self.userInfo.id)"
-            self.emailImageView.image = UIImage(systemName: "envelope.fill")
+            self.emailImageView.image = Images.mailSymbol
         }
     }
     

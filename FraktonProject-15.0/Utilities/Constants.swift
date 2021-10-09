@@ -9,6 +9,8 @@ import UIKit
 
 enum Images {
     static let fraktonLogo = UIImage(named: "frakton-logo")
+    static let heartSymbol = UIImage(systemName: "heart")
+    static let mailSymbol = UIImage(systemName: "envelope.fill")
 }
 
 
