@@ -62,7 +62,7 @@ class FavoritesListVC: UIViewController {
     
     func updateTableUI(with favorites: [User]) {
         if favorites.isEmpty {
-            showEmptyStateView(with: "You don't have any favorite users... yet!\n Add one by tapping the \"+\" in the detailed user info view.", in: self.view)
+            showEmptyStateView(with: "You don't have any favorite users... yet!\n Add one by tapping the heart in the detailed user info view.", in: self.view)
         } else {
             self.favorites = favorites
             DispatchQueue.main.async {
