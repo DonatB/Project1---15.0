@@ -50,8 +50,8 @@ class DBEmptyStateView: UIView {
             
             logoImageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.2),
             logoImageView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.2),
-            logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 249),
-            logoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 65)
+            logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 110),
+            logoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 40)
         ])
     }
 }
